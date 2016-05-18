@@ -1,0 +1,24 @@
+<div class="container">
+
+ <h2>My Cricket App</h2>
+
+ <!-- Todos input -->
+  <form role="form" ng-submit="hm.addTeams()">
+    <div class="row">
+      <div class="input-group">
+        <input type="text" ng-model="hm.team.name" placeholder="What needs to be done?" class="form-control">
+        <span class="input-group-btn">
+          <input type="submit" class="btn btn-primary" value="Add">
+        </span>
+      </div>
+    </div>
+  </form>
+
+  <!-- Todos list -->
+ <p class="form-group" ng-repeat="team in hm.teams" >
+    <input type="text" ng-model="team.name" class="form-control">
+    <span class="input-group-btn">
+      <!-- <button class="btn btn-danger" ng-click="main.removeTodo(todo)" aria-label="Remove">X</button> -->
+    </span>
+  </p>
+</div>
