@@ -1,5 +1,5 @@
-var angularApp = angular.module('MyCricketApp', ['firebase','ngRoute']);
- angularApp.config(function ($routeProvider){
+var MyCricket = angular.module('MyCricketApp', ['firebase','ngRoute']);
+ MyCricket.config(function ($routeProvider){
     $routeProvider
     .when ('/',
     {
@@ -9,7 +9,7 @@ var angularApp = angular.module('MyCricketApp', ['firebase','ngRoute']);
     })
 });
 
-angularApp.controller('MainController',['$scope','$firebaseArray',function($scope,$firebaseArray){
+MyCricket.controller('MainController',['$scope','$firebaseArray',function($scope,$firebaseArray){
   var teamRef = new Firebase ("https://my-cricket-app.firebaseio.com/Teams")
   $scope.teams = $firebaseArray(teamRef);
    $scope.addTeams = function(){
